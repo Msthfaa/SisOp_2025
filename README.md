@@ -1,8 +1,8 @@
 # Tugas 1 Sistem Operasi (17 Feb 2025)
 
 ---
-### Nama : Muhammad Rizqi Putra Nugroho
-### NRP : 3124500044
+### Nama : Musthofa Agung Distyawan
+### NRP : 3124500031
 ### Kelas : D3 IT B
 
 ---
