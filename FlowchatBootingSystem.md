@@ -2,7 +2,7 @@
 ## 3124500031
 ## D3 IT B
 
-https://github.com/Msthfaa/SisOp_2025/blob/83cfd59d000b821b8203a3210501db4410365675/FlowchartBootingStytem_IMG.png
+![image url](https://github.com/Msthfaa/SisOp_2025/blob/83cfd59d000b821b8203a3210501db4410365675/FlowchartBootingStytem_IMG.png)
 # Operating System Workflow from Boot to Shutdown
 
 ## Flowchart Explanation
