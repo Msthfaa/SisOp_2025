@@ -12,12 +12,3 @@ D3 IT B
 3124500031
 
 
-## Struktur Direktori
-```
-📂 repo-tugas
-├── 📂 src  # Folder berisi kode sumber
-├── 📂 docs # Folder berisi dokumentasi
-├── 📜 README.md # Dokumentasi utama
-└── 📜 laporan.pdf # Laporan tugas
-```
-
