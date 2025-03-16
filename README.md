@@ -1,14 +1,13 @@
-# Tugas Sistem Operasi
+# 🖥️ Tugas Sistem Operasi
 
 Repositori ini dibuat untuk keperluan penugasan mata kuliah **Sistem Operasi**.
 
-## Nama
-Musthofa Agung Distyawan
+---
 
-## Kelas
-D3 IT B
+## 👤 Identitas
+- **Nama** : Musthofa Agung Distyawan
+- **NRP** : 3124500031
+- **Kelas** : D3 IT B
 
-## NRP
-3124500031
-
+---
 
