@@ -39,4 +39,4 @@
 
 ---
 
-File ini memberikan gambaran singkat mengenai perkembangan sistem operasi dari masa ke masa.
+
