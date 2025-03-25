@@ -1,48 +1,74 @@
+# Benchmarking CPU dengan FLOPS-IOPS pada Ryzen 7 4000 Series
 
-## 1. Pendahuluan
-Benchmark CPU bertujuan untuk mengukur kemampuan pemrosesan sebuah prosesor dalam menangani operasi floating-point (FLOPS) dan operasi integer (IOPS). FLOPS digunakan dalam aplikasi yang membutuhkan perhitungan numerik intensif, seperti simulasi fisika dan pembelajaran mesin. Sementara itu, IOPS mengukur kemampuan CPU dalam menangani operasi bilangan bulat, yang penting untuk beban kerja umum dalam komputasi sehari-hari.
+## Langkah-langkah
 
-Prosesor yang diuji dalam simulasi ini adalah **AMD Ryzen 7 4000 Series**, yang memiliki arsitektur Zen 2 dengan hingga 8 core dan 16 thread, serta mendukung instruksi SIMD seperti AVX2 yang dapat meningkatkan throughput komputasi.
+### 1. Buka terminal Linux dan lakukan clone repository flops-iops:
+```sh
+git clone https://github.com/ferryastika/flops-iops.git
+```
 
-## 2. Metodologi
-Simulasi ini didasarkan pada pendekatan teoritis dengan mengacu pada spesifikasi Ryzen 7 4000 Series dan hasil benchmark dari prosesor sejenis. Performa dihitung berdasarkan:
-- **Floating Point Operations Per Second (FLOPS)**
-  - Menggunakan jumlah core, clock speed, dan jumlah operasi floating-point per siklus.
-  - Menghitung FLOPS untuk operasi 32-bit (single-precision) dan 64-bit (double-precision).
-- **Integer Operations Per Second (IOPS)**
-  - Menggunakan jumlah pipeline integer dan instruksi per siklus CPU.
-  - Estimasi IOPS untuk berbagai tingkat paralelisme CPU.
+### 2. Masuk ke direktori flops-iops:
+```sh
+cd flops-iops
+```
 
-## 3. Hasil Simulasi
-Berdasarkan spesifikasi AMD Ryzen 7 4000 Series, estimasi kinerja benchmark CPU adalah sebagai berikut:
+### 3. Build Program Benchmark:
+```sh
+make
+```
 
-### 3.1 Performa Floating Point (FLOPS)
-| Precision | Estimasi FLOPS |
-|-----------|---------------|
-| 32-bit (Single) | ~800 GFLOPS - 1.2 TFLOPS |
-| 64-bit (Double) | ~400 GFLOPS - 600 GFLOPS |
+### 4. Jalankan pengujian FLOPS dan IOPS:
+```sh
+./iops32 $(nproc)
+./iops64 $(nproc)
+./flops32 $(nproc)
+./flops64 $(nproc)
+```
 
-### 3.2 Performa Integer (IOPS)
-| Instruksi | Estimasi IOPS |
-|-----------|--------------|
-| 32-bit Integer | ~3 - 4 TIOPS |
-| 64-bit Integer | ~1.5 - 2 TIOPS |
+## Hasil
+### CPU: AMD Ryzen 7 7435HS
 
-Catatan: Nilai ini adalah estimasi berdasarkan jumlah core, clock speed, dan instruksi per siklus (IPC) Ryzen 7 4000. Nilai aktual dapat bervariasi tergantung pada optimasi kode dan penggunaan instruksi SIMD.
+#### 32 Bit Integer Operations Per Second
+```sh
+./iops32 $(nproc)
+```
+```
+Benchmarking for 32 Bit Integer operations per second
+1 | Tr 1: 15477088351 Tr 2: 15391333267 Tr 3: 15485343585 IOPS = 46353765203
+Maximum CPU Throughput: 46.353764 Gigaiops.
+Maximum Single Core Throughput: 15.485844 Gigaiops.
+```
 
-## 4. Analisis dan Kesimpulan
-Dari simulasi ini, terlihat bahwa Ryzen 7 4000 Series memiliki kinerja yang cukup tinggi dalam pemrosesan floating-point dan integer. Dukungan terhadap instruksi AVX2 memungkinkan peningkatan throughput komputasi secara signifikan, terutama dalam aplikasi yang dapat memanfaatkan paralelisme tinggi.
+#### 64 Bit Integer Operations Per Second
+```sh
+./iops64 $(nproc)
+```
+```
+Benchmarking for 64 Bit Integer operations per second
+1| Tr 1: 43473578720 Tr 2: 43305846454 Tr 3: 43555439304 IOPS = 130334864478
+Maximum CPU Throughput: 130.334869 Gigaiops.
+Maximum Single Core Throughput: 43.555439 Gigaiops.
+```
 
-Performa FLOPS yang mencapai **hingga 1.2 TFLOPS** untuk operasi single-precision membuat CPU ini cukup andal untuk aplikasi yang membutuhkan komputasi intensif, seperti pemrosesan grafis dan simulasi fisika ringan. Sementara itu, kemampuan **IOPS hingga 4 TIOPS** menjadikannya sangat efisien dalam menangani tugas-tugas umum seperti komputasi berbasis integer dan beban kerja server ringan.
+#### 32 Bit Floating Point Operations Per Second
+```sh
+./flops32 $(nproc)
+```
+```
+Benchmarking for 32 Bit Floating point operations per second
+1| Tr 1: 5627075432 Tr 2: 5524270671 Tr 3: 5498892562 FLOPS = 16650238665
+Maximum CPU Throughput: 16.650238 Gigaflops.
+Maximum Single Core Throughput: 5.627076 Gigaflops.
+```
 
-Untuk hasil benchmark yang lebih akurat, disarankan untuk menjalankan pengujian langsung menggunakan alat seperti `flops-iops` atau perangkat lunak benchmarking lainnya pada sistem yang sebenarnya.
+#### 64 Bit Floating Point Operations Per Second
+```sh
+./flops64 $(nproc)
+```
+```
+Benchmarking for 64 Bit Floating point operations per second
+1| Tr 1: 11557878748 Tr 2: 11205021022 Tr 3: 10784198178 FLOPS = 33547097948
+Maximum CPU Throughput: 33.547096 Gigaflops.
+Maximum Single Core Throughput: 11.557878 Gigaflops.
+```
 
----
-
-**Rekomendasi:**
-- Jalankan benchmark aktual menggunakan **flops-iops** untuk mendapatkan hasil real-world.
-- Gunakan CPU ini untuk tugas multi-threaded yang membutuhkan performa tinggi.
-- Pertimbangkan penggunaan instruksi SIMD dan optimasi perangkat lunak untuk memaksimalkan kinerja CPU.
-
----
-**Penulis:** Simulasi berbasis AMD Ryzen 7 4000 Series
