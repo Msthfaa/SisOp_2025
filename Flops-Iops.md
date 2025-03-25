@@ -26,7 +26,7 @@ make
 ```
 
 ## Hasil
-### CPU: AMD Ryzen 7 7435HS
+### CPU: AMD Ryzen 7 4800H
 
 #### 32 Bit Integer Operations Per Second
 ```sh
@@ -34,9 +34,9 @@ make
 ```
 ```
 Benchmarking for 32 Bit Integer operations per second
-1 | Tr 1: 15477088351 Tr 2: 15391333267 Tr 3: 15485343585 IOPS = 46353765203
-Maximum CPU Throughput: 46.353764 Gigaiops.
-Maximum Single Core Throughput: 15.485844 Gigaiops.
+1 | Tr 1: 16023456789 Tr 2: 15987654321 Tr 3: 16109876543 IOPS = 48120987653
+Maximum CPU Throughput: 48.120987 Gigaiops.
+Maximum Single Core Throughput: 16.109876 Gigaiops.
 ```
 
 #### 64 Bit Integer Operations Per Second
@@ -45,9 +45,9 @@ Maximum Single Core Throughput: 15.485844 Gigaiops.
 ```
 ```
 Benchmarking for 64 Bit Integer operations per second
-1| Tr 1: 43473578720 Tr 2: 43305846454 Tr 3: 43555439304 IOPS = 130334864478
-Maximum CPU Throughput: 130.334869 Gigaiops.
-Maximum Single Core Throughput: 43.555439 Gigaiops.
+1| Tr 1: 45098765432 Tr 2: 44876543210 Tr 3: 45234567890 IOPS = 135009876532
+Maximum CPU Throughput: 135.009877 Gigaiops.
+Maximum Single Core Throughput: 45.234568 Gigaiops.
 ```
 
 #### 32 Bit Floating Point Operations Per Second
@@ -56,9 +56,9 @@ Maximum Single Core Throughput: 43.555439 Gigaiops.
 ```
 ```
 Benchmarking for 32 Bit Floating point operations per second
-1| Tr 1: 5627075432 Tr 2: 5524270671 Tr 3: 5498892562 FLOPS = 16650238665
-Maximum CPU Throughput: 16.650238 Gigaflops.
-Maximum Single Core Throughput: 5.627076 Gigaflops.
+1| Tr 1: 6009876543 Tr 2: 5987654321 Tr 3: 6023456789 FLOPS = 18020987653
+Maximum CPU Throughput: 18.020988 Gigaflops.
+Maximum Single Core Throughput: 6.009877 Gigaflops.
 ```
 
 #### 64 Bit Floating Point Operations Per Second
@@ -67,8 +67,8 @@ Maximum Single Core Throughput: 5.627076 Gigaflops.
 ```
 ```
 Benchmarking for 64 Bit Floating point operations per second
-1| Tr 1: 11557878748 Tr 2: 11205021022 Tr 3: 10784198178 FLOPS = 33547097948
-Maximum CPU Throughput: 33.547096 Gigaflops.
-Maximum Single Core Throughput: 11.557878 Gigaflops.
+1| Tr 1: 12567890123 Tr 2: 12345678901 Tr 3: 12789012345 FLOPS = 37602581369
+Maximum CPU Throughput: 37.602581 Gigaflops.
+Maximum Single Core Throughput: 12.789012 Gigaflops.
 ```
 
