@@ -3,12 +3,12 @@
 ## Single Thread
 Konsep single thread mengacu pada eksekusi program yang hanya memiliki satu jalur kontrol, artinya hanya satu tugas yang dikerjakan dalam satu waktu. Dalam model ini, CPU menjalankan satu instruksi dari satu thread hingga selesai sebelum melanjutkan ke instruksi berikutnya. Hal ini membuat pengelolaan dan debugging aplikasi menjadi lebih sederhana, namun bisa menjadi tidak efisien jika tugas-tugas yang berat harus diselesaikan secara berurutan.
 
-![Single Thread](https://upload.wikimedia.org/wikipedia/commons/5/5a/Single_threaded_process.png)
+![Single Thread](https://i.imgur.com/2wWxiGp.png)
 
 ## Multithread
 Multithreading memungkinkan program menjalankan beberapa thread secara bersamaan dalam satu proses. Setiap thread dapat menjalankan tugasnya masing-masing, yang membuat program lebih efisien terutama pada sistem multiprosesor. Dengan multithreading, aplikasi dapat tetap responsif meskipun menjalankan proses berat di latar belakang, seperti pengunduhan file atau komputasi matematis.
 
-![Multithread](https://upload.wikimedia.org/wikipedia/commons/0/01/Multithreaded_process.png)
+![Multithread](https://i.imgur.com/kcJv3KL.png)
 
 # Programming Exercise
 
@@ -71,6 +71,8 @@ Langkah-langkah:
 Perbedaan utama antara POSIX dan Windows adalah dalam API dan sintaks yang digunakan. Meskipun kedua pendekatan memiliki tujuan yang sama, yaitu melakukan multitasking, masing-masing memiliki konvensi dan dukungan sistem operasi yang berbeda. Namun, keduanya sangat berguna dalam aplikasi yang membutuhkan performa tinggi melalui eksekusi paralel.
 
 ---
+
+**Nama file**: `threading_concepts_and_exercise.md`
 
 Referensi kode: [GitHub Repository - OSC10E Chapter 4](https://github.com/ferryastika/osc10e/tree/master/ch4)
 
