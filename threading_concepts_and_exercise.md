@@ -7,6 +7,8 @@ Konsep single thread mengacu pada eksekusi program yang hanya memiliki satu jalu
 ## Multithread
 Multithreading memungkinkan program menjalankan beberapa thread secara bersamaan dalam satu proses. Setiap thread dapat menjalankan tugasnya masing-masing, yang membuat program lebih efisien terutama pada sistem multiprosesor. Dengan multithreading, aplikasi dapat tetap responsif meskipun menjalankan proses berat di latar belakang, seperti pengunduhan file atau komputasi matematis.
 
+## Ilustrasi
+![image url](https://github.com/Msthfaa/SisOp_2025/blob/main/thread.png)
 
 # Programming Exercise
 
