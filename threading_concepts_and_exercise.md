@@ -3,12 +3,10 @@
 ## Single Thread
 Konsep single thread mengacu pada eksekusi program yang hanya memiliki satu jalur kontrol, artinya hanya satu tugas yang dikerjakan dalam satu waktu. Dalam model ini, CPU menjalankan satu instruksi dari satu thread hingga selesai sebelum melanjutkan ke instruksi berikutnya. Hal ini membuat pengelolaan dan debugging aplikasi menjadi lebih sederhana, namun bisa menjadi tidak efisien jika tugas-tugas yang berat harus diselesaikan secara berurutan.
 
-![Single Thread](https://i.imgur.com/2wWxiGp.png)
 
 ## Multithread
 Multithreading memungkinkan program menjalankan beberapa thread secara bersamaan dalam satu proses. Setiap thread dapat menjalankan tugasnya masing-masing, yang membuat program lebih efisien terutama pada sistem multiprosesor. Dengan multithreading, aplikasi dapat tetap responsif meskipun menjalankan proses berat di latar belakang, seperti pengunduhan file atau komputasi matematis.
 
-![Multithread](https://i.imgur.com/kcJv3KL.png)
 
 # Programming Exercise
 
