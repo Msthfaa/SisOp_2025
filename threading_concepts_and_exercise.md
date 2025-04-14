@@ -1,11 +1,15 @@
 # Konsep Single Thread dan Multithread
 
 ## Single Thread
-Konsep single thread mengacu pada eksekusi program yang hanya memiliki satu jalur kontrol, artinya hanya satu tugas yang dikerjakan dalam satu waktu. Dalam model ini, CPU menjalankan satu instruksi dari satu thread hingga selesai sebelum melanjutkan ke instruksi berikutnya. Hal ini membuat pengelolaan dan debugging aplikasi menjadi lebih sederhana, namun bisa menjadi tidak efisien jika tugas-tugas yang berat harus diselesaikan secara berurutan.
+Konsep single thread mengacu pada eksekusi program yang hanya memiliki satu jalur kontrol, artinya hanya satu tugas yang dikerjakan dalam satu waktu. Dalam pendekatan ini, CPU menjalankan satu instruksi dari satu thread hingga selesai sebelum melanjutkan ke instruksi berikutnya. Pendekatan ini cocok digunakan untuk aplikasi sederhana yang tidak membutuhkan proses paralel atau penanganan tugas secara bersamaan.
+
+Keunggulan dari model ini adalah kemudahan dalam debugging dan manajemen alur program, karena alurnya linier dan mudah diprediksi. Namun, kekurangannya terletak pada efisiensi — jika ada tugas berat atau proses yang memakan waktu, maka tugas-tugas lainnya harus menunggu hingga tugas tersebut selesai diproses, sehingga waktu eksekusi keseluruhan bisa menjadi lambat.
 
 
 ## Multithread
-Multithreading memungkinkan program menjalankan beberapa thread secara bersamaan dalam satu proses. Setiap thread dapat menjalankan tugasnya masing-masing, yang membuat program lebih efisien terutama pada sistem multiprosesor. Dengan multithreading, aplikasi dapat tetap responsif meskipun menjalankan proses berat di latar belakang, seperti pengunduhan file atau komputasi matematis.
+Multithreading adalah kemampuan program untuk menjalankan beberapa thread secara bersamaan dalam satu proses. Masing-masing thread dapat menangani tugas berbeda, sehingga program dapat memproses beberapa instruksi dalam waktu yang bersamaan. Ini menjadikan program lebih efisien, terutama jika dijalankan pada sistem dengan banyak inti prosesor (multi-core), karena beban kerja dapat dibagi rata.
+
+Keuntungan dari multithreading adalah meningkatkan kinerja dan responsivitas program, seperti menjaga antarmuka pengguna tetap aktif saat proses berat berjalan di latar belakang. Namun, multithreading juga membawa tantangan tambahan seperti kondisi balapan (race condition), kebutuhan sinkronisasi antar thread, dan kompleksitas debugging yang lebih tinggi dibandingkan single thread.
 
 ## Ilustrasi
 ![image url](https://github.com/Msthfaa/SisOp_2025/blob/main/thread.png)
