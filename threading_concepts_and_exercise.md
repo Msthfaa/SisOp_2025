@@ -76,7 +76,3 @@ Perbedaan utama antara POSIX dan Windows adalah dalam API dan sintaks yang digun
 
 ---
 
-**Nama file**: `threading_concepts_and_exercise.md`
-
-Referensi kode: [GitHub Repository - OSC10E Chapter 4](https://github.com/ferryastika/osc10e/tree/master/ch4)
-
