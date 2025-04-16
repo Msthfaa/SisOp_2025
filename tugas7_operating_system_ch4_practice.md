@@ -1,62 +1,95 @@
+## Chapter 4: Practice Exercises (4.1 - 4.7)
 
-## Practice Exercises 4.1 – 4.5  
----
+### 4.1
+**Question:** Provide three programming examples in which multithreading provides better performance than a single-threaded solution.
 
-### 4.1  
-**Question:**  
-Provide two programming examples in which multithreading provides better performance than a single-threaded solution.
-
-**Answer:**  
-1. **Web Server**: A multithreaded web server can handle multiple client requests simultaneously. While one thread handles a request, others can process additional incoming connections, resulting in better throughput.
-
-2. **Multimedia Application**: An application like a video player can have one thread decoding video, another for audio, and another for rendering. This separation allows smoother performance compared to a single-threaded approach where tasks would block each other.
+**Answer:**
+1. **Web Servers:** Handling multiple client requests concurrently using a thread per client allows better responsiveness and throughput.
+2. **Image Processing:** Applying filters to different parts of an image in parallel using multiple threads speeds up processing.
+3. **Real-Time Gaming Engines:** Rendering graphics, processing game logic, and handling user inputs concurrently leads to smoother performance.
 
 ---
 
-### 4.2  
-**Question:**  
-What are two differences between user-level threads and kernel-level threads?
+### 4.2
+**Question:** Using Amdahl’s Law, calculate the speedup gain of an application that has a 60 percent parallel component for (a) two processing cores and (b) four processing cores.
 
-**Answer:**  
-1. **Management**:  
-   - *User-level threads* are managed by user-space libraries without kernel involvement.  
-   - *Kernel-level threads* are managed directly by the operating system.
+**Answer:**
+Amdahl’s Law: \( 
+Speedup = \frac{1}{(1 - P) + \frac{P}{N}} \)
+Where:
+- \( P = 0.6 \)
+- \( N = \text{number of cores} \)
 
-2. **Context Switching**:  
-   - *User-level threads* have faster context switching since it does not require mode switching to the kernel.  
-   - *Kernel-level threads* require a system call to switch, making the operation slower.
+**(a)** For 2 cores:
+\[
+Speedup = \frac{1}{(1 - 0.6) + \frac{0.6}{2}} = \frac{1}{0.4 + 0.3} = \frac{1}{0.7} \approx 1.43
+\]
 
----
-
-### 4.3  
-**Question:**  
-Provide two programming examples where multithreading does not provide better performance than a single-threaded solution.
-
-**Answer:**  
-1. **Simple Calculator Program**: For basic arithmetic computations without concurrency, the overhead of thread creation may outweigh any performance benefit.
-
-2. **Sequential File Compression**: When compressing a small file, using multiple threads can introduce unnecessary complexity and overhead, making it less efficient than a single-threaded version.
+**(b)** For 4 cores:
+\[
+Speedup = \frac{1}{0.4 + \frac{0.6}{4}} = \frac{1}{0.4 + 0.15} = \frac{1}{0.55} \approx 1.82
+\]
 
 ---
 
-### 4.4  
-**Question:**  
-Describe the actions taken by a thread library to context switch between user-level threads.
+### 4.3
+**Question:** Does the multithreaded web server described in Section 4.1 exhibit task or data parallelism?
 
-**Answer:**  
-The thread library:
-1. Saves the context (registers, program counter, stack pointer) of the currently running thread.
-2. Selects the next thread to run using a scheduling algorithm.
-3. Restores the saved context of the selected thread.
-This process is done entirely in user space, without kernel intervention.
+**Answer:**
+It exhibits **task parallelism**, as each thread performs a different task (handling separate client requests) independently.
 
 ---
 
-### 4.5  
-**Question:**  
-Suppose that threads A and B belong to the same process. Can they communicate with one another? If so, how?
+### 4.4
+**Question:** What are two differences between user-level threads and kernel-level threads? Under what circumstances is one type better than the other?
 
-**Answer:**  
-Yes, threads A and B can communicate directly because they share the same address space. They can use shared variables in memory. However, proper synchronization mechanisms like mutexes or semaphores are needed to avoid race conditions.
+**Answer:**
+- **User-level threads:**
+  - Managed in user space.
+  - Faster context switching and lower overhead.
+  - Better when performance is critical, and concurrency doesn't require parallel execution on multiple CPUs.
+
+- **Kernel-level threads:**
+  - Managed by the OS kernel.
+  - Can be scheduled on different processors.
+  - Better for applications needing true parallelism.
 
 ---
+
+### 4.5
+**Question:** Describe the actions taken by a kernel to context-switch between kernel-level threads.
+
+**Answer:**
+- Save the current thread’s context (registers, program counter) into its thread control block (TCB).
+- Select the next thread to run based on the scheduler.
+- Load the new thread's context from its TCB.
+- Resume execution of the new thread.
+
+---
+
+### 4.6
+**Question:** What resources are used when a thread is created? How do they differ from those used when a process is created?
+
+**Answer:**
+**Thread creation uses:**
+- Stack space
+- Program counter
+- Register set
+- Thread ID
+
+**Process creation uses:**
+- All of the above, plus:
+- Separate address space
+- File descriptors
+- IPC mechanisms
+
+Thread creation is more lightweight and shares more resources with the parent than process creation.
+
+---
+
+### 4.7
+**Question:** Assume that an operating system maps user-level threads to the kernel using the many-to-many model and that the mapping is done through LWPs. Furthermore, the system allows developers to create real-time threads for use in real-time systems. Is it necessary to bind a real-time thread to an LWP? Explain.
+
+**Answer:**
+Yes, it is necessary. Binding ensures that the real-time thread has a dedicated LWP, allowing the kernel to schedule it independently and meet strict timing requirements without delays caused by contention with other user threads.
+
