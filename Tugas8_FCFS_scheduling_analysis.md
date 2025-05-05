@@ -59,7 +59,7 @@ int main()
 }
 ```
 ### Hasil
-![image url](https://github.com/Msthfaa/SisOp_2025/blob/main/assets/Tugas3_FlowchartBootingStytem_IMG.png)
+![image url](https://github.com/Msthfaa/SisOp_2025/blob/main/assets/img1.png)
 
 ### a. Analisa Mendetail
 Algoritma **First-Come First-Served (FCFS)** secara **non-preemptive** bekerja dengan menyusun proses berdasarkan waktu kedatangan (arrival time). Proses yang datang terlebih dahulu akan diproses duluan hingga selesai, tanpa bisa diganggu oleh proses lain yang mungkin datang belakangan namun memiliki burst time lebih kecil.
@@ -152,7 +152,7 @@ int main()
 }
 ```
 ### Hasil
-![image url](https://github.com/Msthfaa/SisOp_2025/blob/main/assets/Tugas3_FlowchartBootingStytem_IMG.png)
+![image url](https://github.com/Msthfaa/SisOp_2025/blob/main/assets/img2.png)
 
 ### a. Analisa Mendetail
 Versi ini adalah implementasi FCFS yang disederhanakan, karena tidak mempertimbangkan waktu kedatangan. Seluruh proses dianggap datang bersamaan di waktu 0, sehingga eksekusi dilakukan sesuai urutan input.
