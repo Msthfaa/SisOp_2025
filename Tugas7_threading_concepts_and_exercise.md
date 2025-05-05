@@ -12,7 +12,7 @@ Multithreading adalah kemampuan program untuk menjalankan beberapa thread secara
 Keuntungan dari multithreading adalah meningkatkan kinerja dan responsivitas program, seperti menjaga antarmuka pengguna tetap aktif saat proses berat berjalan di latar belakang. Namun, multithreading juga membawa tantangan tambahan seperti kondisi balapan (race condition), kebutuhan sinkronisasi antar thread, dan kompleksitas debugging yang lebih tinggi dibandingkan single thread.
 
 ## Ilustrasi
-![image url](https://github.com/Msthfaa/SisOp_2025/blob/main/thread.png)
+![image url](https://github.com/Msthfaa/SisOp_2025/blob/main/assets/Tugas7_thread.png)
 
 # Programming Exercise
 
