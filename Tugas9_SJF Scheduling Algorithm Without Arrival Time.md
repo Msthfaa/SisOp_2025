@@ -1,4 +1,4 @@
-# First Come First Served (FCFS) Scheduling Algorithm Without Arrival Time
+# SJF Scheduling Algorithm Without Arrival Time
 
 ## Kelompok
 - Musthofa Agung Distyawan (3124500031)
