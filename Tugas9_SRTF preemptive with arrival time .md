@@ -73,8 +73,8 @@ int main()
 ### Hasil
 ![image url](https://github.com/Msthfaa/SisOp_2025/blob/main/assets/tugas9_hasil3.jpg)
 
-### SJF scheduling chart
-![image url](https://github.com/Msthfaa/SisOp_2025/blob/main/assets/tugas9_chart3.png)
+### SRTF scheduling chart
+![image url](https://github.com/Msthfaa/SisOp_2025/blob/main/assets/Tugas9_chart3.png)
 
 ### Analisa
 ## 1. Struktur Data `proc`
