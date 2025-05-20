@@ -1,4 +1,4 @@
-# First Come First Served (FCFS) Scheduling Algorithm Without Arrival Time
+# SJF Scheduling Algorithm Without Arrival Time
 
 ## Kelompok
 - Musthofa Agung Distyawan (3124500031)
@@ -138,3 +138,5 @@ Menghitung rata‑rata TAT dan WT untuk semua proses.
 ### 6.Kesimpulan
 Algoritma SJF non-preemptive tanpa arrival time mem‐prioritaskan proses berdurasi paling pendek, sehingga rata-rata waiting time dan turnaround time turun signifikan dibanding FCFS. Dengan semua proses dianggap tiba di waktu 0, setiap turnaround time sama dengan completion time, dan waiting time dihitung sebagai selisihnya dengan burst time. Hasilnya, eksekusi berurutan dari burst terpendek ke terpanjang memberi efisiensi maksimal pada metrik kinerja utama
 
+### 6.Kesimpulan
+Algoritma SJF non-preemptive tanpa arrival time mem‐prioritaskan proses berdurasi paling pendek, sehingga rata-rata waiting time dan turnaround time turun signifikan dibanding FCFS. Dengan semua proses dianggap tiba di waktu 0, setiap turnaround time sama dengan completion time, dan waiting time dihitung sebagai selisihnya dengan burst time. Hasilnya, eksekusi berurutan dari burst terpendek ke terpanjang memberi efisiensi maksimal pada metrik kinerja utama
